@@ -64,3 +64,7 @@ Also put entities in a `Model` directory instead of a `Entity` directory.
 See an example of the above [here](https://github.com/Setono/SyliusRedirectPlugin/blob/master/src/SetonoSyliusRedirectPlugin.php) and [here](https://github.com/Setono/SyliusRedirectPlugin/blob/master/src/DependencyInjection/Configuration.php).
 
 When adding database mapping files we use underscore in column names. Here is an example of how to do that: `<field name="apiKey" column="api_key" />`
+
+## 6. Install Php Inspections (EA Extended)
+Install the [PHP Inspections plugin](https://github.com/kalessil/phpinspectionsea/blob/master/docs/getting-started.md) in your PhpStorm and inspect your code before pushing. You do this by clickig `Code > Inspect Code`.
+
