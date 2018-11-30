@@ -68,3 +68,22 @@ When adding database mapping files we use underscore in column names. Here is an
 ## 6. Install Php Inspections (EA Extended)
 Install the [PHP Inspections plugin](https://github.com/kalessil/phpinspectionsea/blob/master/docs/getting-started.md) in your PhpStorm and inspect your code before pushing. You do this by clickig `Code > Inspect Code`.
 
+## 7. Add `.gitattributes` file
+Add a `.gitattributes` file to minimize the payload when installing packages. An example could be:
+
+```text
+/etc                        export-ignore
+/features                   export-ignore
+/spec                       export-ignore
+/tests                      export-ignore
+/.gitattributes             export-ignore
+/.gitignore                 export-ignore
+/.scrutinizer.yml           export-ignore
+/.travis.yml                export-ignore
+/behat.yml.dist             export-ignore
+/easy-coding-standard.yml   export-ignore
+/phpspec.yml.dist           export-ignore
+/phpstan.neon               export-ignore
+/README.md                  export-ignore
+```
+
