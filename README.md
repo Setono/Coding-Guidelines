@@ -42,6 +42,11 @@ Add the `.scrutinizer.yml` file to your project. Here is an example:
 
 ```yaml
 build:
+    nodes:
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run
     environment:
         variables:
             COMPOSER_MEMORY_LIMIT: -1
