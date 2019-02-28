@@ -186,3 +186,6 @@ indent_size = 4
 indent_style = space
 indent_size = 4
 ```
+
+## 9. Use subscribers instead of listeners
+When you define event listeners/subscribers, use subscribers. 
