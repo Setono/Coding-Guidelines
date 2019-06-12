@@ -28,6 +28,11 @@ $ vendor/bin/ecs check src --fix
 ## 2. Use PHPStan
 Any plugin must have 0 PHPStan errors. If you add an error to the ignore list you must have a very good reason.
 
+### 2.1 Use PHPStan strict rules
+```bash
+composer require --dev phpstan/phpstan-strict-rules
+```
+
 ## 3. Setup Travis
 First of all use the default .travis.yml file bundled with Sylius plugin skeleton.
 
@@ -93,99 +98,24 @@ Add a `.gitattributes` file to minimize the payload when installing packages. An
 ```
 
 ## 8. Use EditorConfig plugin and file
-Download and install the [EditorConfig plugin](https://plugins.jetbrains.com/plugin/7294-editorconfig) and include a `.editorconfig` file in the root of the plugin. An example could be (taken from [Sylius](https://github.com/Sylius/Sylius-Standard/blob/master/.editorconfig)):
-```text
-# EditorConfig helps developers define and maintain consistent
-# coding styles between different editors and IDEs
-# editorconfig.org
-
-root = true
-
-[*]
-# Change these settings to your own preference
-indent_style = space
-indent_size = 4
-
-# We recommend you to keep these unchanged
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.feature]
-indent_style = space
-indent_size = 2
-
-[*.js]
-indent_style = space
-indent_size = 2
-
-[*.json]
-indent_style = space
-indent_size = 2
-
-[*.md]
-indent_style = space
-indent_size = 4
-trim_trailing_whitespace = false
-
-[*.neon]
-indent_style = tab
-indent_size = 4
-
-[*.php]
-indent_style = space
-indent_size = 4
-
-[*.sh]
-indent_style = tab
-indent_size = 4
-
-[*.{yaml,yml}]
-indent_style = space
-indent_size = 4
-trim_trailing_whitespace = false
-
-[.babelrc]
-indent_style = space
-indent_size = 2
-
-[.gitmodules]
-indent_style = tab
-indent_size = 4
-
-[.php_cs{,.dist}]
-indent_style = space
-indent_size = 4
-
-[composer.json]
-indent_style = space
-indent_size = 4
-
-[docker-compose{,.override}.{yaml,yml}]
-indent_style = space
-indent_size = 2
-
-[Dockerfile]
-indent_style = tab
-indent_size = 4
-
-[package.json]
-indent_style = space
-indent_size = 2
-
-[phpspec.yml{,.dist}]
-indent_style = space
-indent_size = 4
-
-[phpstan.neon]
-indent_style = tab
-indent_size = 4
-
-[phpunit.xml{,.dist}]
-indent_style = space
-indent_size = 4
-```
+Download and install the [EditorConfig plugin](https://plugins.jetbrains.com/plugin/7294-editorconfig) and include a `.editorconfig` file in the root of the plugin. An example could be (taken from [Sylius](https://raw.githubusercontent.com/Sylius/Sylius-Standard/master/.editorconfig)):
 
 ## 9. Use subscribers instead of listeners
-When you define event listeners/subscribers, use subscribers. 
+When you define event listeners/subscribers, use subscribers. See [tomasvotruba.cz/blog/2019/05/16/don-t-ever-use-listeners/](https://www.tomasvotruba.cz/blog/2019/05/16/don-t-ever-use-listeners/)
+
+## 10. Normalize composer.json
+Install:
+
+```bash
+composer require --dev localheinz/composer-normalize
+```
+
+Run:
+```bash
+composer normalize
+```
+
+For CI tools (like Travis):
+```bash
+composer normalize --dry-run
+```
