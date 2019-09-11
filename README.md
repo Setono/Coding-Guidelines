@@ -119,3 +119,12 @@ For CI tools (like Travis):
 ```bash
 composer normalize --dry-run
 ```
+
+## 11. Guard against development packages in production
+Read more here: [kalessil/production-dependencies-guard](https://github.com/kalessil/production-dependencies-guard)
+
+Just run this and it will work:
+
+```bash
+composer require --dev kalessil/production-dependencies-guard:dev-master
+```
