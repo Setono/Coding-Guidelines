@@ -33,6 +33,31 @@ Any plugin must have 0 PHPStan errors. If you add an error to the ignore list yo
 composer require --dev phpstan/phpstan-strict-rules
 ```
 
+```neon
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+```
+
+### 2.2 Use PHPStan safe rule
+```bash
+composer require --dev thecodingmachine/phpstan-safe-rule
+```
+
+```neon
+includes:
+    - vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+```
+
+### 2.3 Use PHPStan generic rules
+```bash
+composer require --dev korbeil/phpstan-generic-rules
+```
+
+```neon
+includes:
+    - vendor/korbeil/phpstan-generic-rules/extension.neon
+```
+
 ## 3. Setup Travis
 First of all use the default .travis.yml file bundled with Sylius plugin skeleton.
 
