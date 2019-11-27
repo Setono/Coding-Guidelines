@@ -153,3 +153,7 @@ Just run this and it will work:
 ```bash
 composer require --dev kalessil/production-dependencies-guard:dev-master
 ```
+
+## 12. Add github actions
+
+See a good example of the workflow file here: [github.com/Setono/SyliusRedirectPlugin/blob/master/.github/workflows/build.yaml](https://github.com/Setono/SyliusRedirectPlugin/blob/master/.github/workflows/build.yaml)
