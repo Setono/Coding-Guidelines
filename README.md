@@ -157,3 +157,7 @@ composer require --dev kalessil/production-dependencies-guard:dev-master
 ## 12. Add github actions
 
 See a good example of the workflow file here: [github.com/Setono/SyliusRedirectPlugin/blob/master/.github/workflows/build.yaml](https://github.com/Setono/SyliusRedirectPlugin/blob/master/.github/workflows/build.yaml)
+
+## 13. Use a global gitignore
+
+Read this article: [sebastiandedeyne.com/setting-up-a-global-gitignore-file/](https://sebastiandedeyne.com/setting-up-a-global-gitignore-file/)
